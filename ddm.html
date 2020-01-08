@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!--Add Roboto Font. It's my favorite!!-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <!--Add Favicon for the Project-->
+  <link rel="shortcut icon" type="image/x-icon" href="img/test.jpg">
+  <!--Add/call style sheet(s) to html-->
+  <link rel="stylesheet" href="css/main.css" media="all" >
+  <link rel="stylesheet" href="css/navbar.css" media="all" >
+  <!--Make Screen Size Responsive-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--Call Javascript for Tableau API-->
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script type="text/javascript" src="js/crosstab.js"></script>
+  
+  <!--Site header logo and text--> 
+  <div class="logos">
+    <!-- <a href="https://adb.org"><img src="img/adb-logo.png" alt="Asian Development Bank" width="128" height="128"></a>
+    <h1 align="center">District Development Monitor</h1>   -->
+    <img src="img/custom-logo.png" alt="Asian Development Bank" width="100%" height="300">
+  </div> 
+</head>
+
+<body> 
+<!-- <body onload="createViz(0);"> -->
+  <div class="tab">
+
+    <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">Home </button>
+    <button class="tablinks" onclick="openTab(event, 'Cross-Tabulation')">Analysis</button>
+    <button class="tablinks" onclick="openTab(event, 'Results')">Results</button>
+    <button class="tablinks" onclick="openTab(event, 'Report')">Glossary</button>
+  </div>
+
+
+  <div id="About" class="tabcontent">
+    <p align="justify">A robust "District Development Monitor (DDM)" was developed for ECD in Pakistan, which is a
+      dynamic, flexible and real-time updated analytical tool and framework designed to facilitate the Decision
+      Support Systems (DSS) during the various stages of project life cycle including planning, implementation,
+      monitoring, resource allocation, scenario-based analysis, modelling and others, across all the 110 districts of
+      Pakistan. The DDM was developed as a user-friendly tool with an excellent cross platform compatibility that
+      makes good use of visuals to represent the results and has no requirement of any propriety software use from the
+      user’s end. It enabled the evaluation of projects across a range of critical sectors such as infrastructure,
+      energy, transportation, logistics, water resource management and sanitization, education, health and so forth.
+    </p>
+    <img src="img/test1.jpg" alt="DDM" width="100%" height="100%"> 
+      </div>
+
+
+  <div id="Report" class="tabcontent">
+    <embed src="img/Indicators.pdf" type="application/pdf"   height="800px" width="100%"> 
+  </div>
+
+
+  <div id="Cross-Tabulation" class="tabcontent" >
+    <div class="navbar">
+        <a href="javascript:createViz(0);">Tabular</a>
+        <a href="javascript:createViz(1);">Time Series</a>
+        <a href="javascript:createViz(2);">Spatial Representation</a>
+        <a href="javascript:createViz(3);">Poverty</a>
+        <a href="javascript:createViz(4);">Population</a>
+        <a href="javascript:createViz(5);">PSLM</a>
+        <a href="javascript:createViz(6);">MICS</a>
+    </div>
+    <div id="controls" style="padding:20px;">
+      <button style="width:100px;" onclick="javascript:createViz1(-1);">Previous</button>
+      <button style="width:100px;" onclick="javascript:createViz1(1);">Next</button>
+  </div>
+    <div class="main">
+        
+    </div>
+  </div>
+
+  <div id="Report" class="tabcontent">
+    <center>
+      <p>Glossary of indicators and their definition comes here.</p>
+    </center>
+  </div>
+
+  <!--Call the tab bar script-->
+  <script type="text/javascript" src="js/tab.js"></script>
+
+  <div class="footer">
+    <p align="center"> © 2019 All Rights Reserved. No content on this site may be copied and reused in any form or
+      fashion without express written permission of <a href="https://adb.org">Asian Development Bank</a>, <a href="https://sixthroad.com">Sixth Road Consulting</a> and <a href="http://www.reenergia.com">Reenergia-Enhar</a>. </p>
+  </div>
+</body>
+
+</html> 
